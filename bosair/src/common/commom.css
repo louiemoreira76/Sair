@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: amor1;
+    src: url(../assets/fonts/CuteLove.ttf);
+}
+
+@font-face {
+    font-family: amor2;
+    src: url(../assets/fonts/Cute\ Love.otf);
+}
+
+@font-face {
+    font-family: amor3;
+    src: url(../assets/fonts/Cute-Bold.otf);
+}
+
+@font-face {
+    font-family: amor4;
+    src: url(../assets/fonts/Glossy\ Sheen\ Shine\ DEMO.ttf);
+}
+
+@font-face {
+    font-family: amor5;
+    src: url(../assets/fonts/Cute\ Monster.ttf);
+}

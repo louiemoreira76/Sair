@@ -1,0 +1,318 @@
+
+h1{
+    font-family: amor4;
+    position: relative;
+    font-size: 2em;
+    letter-spacing: 15px;
+    color: #020024;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 1.80em;
+    outline: none;
+    animation: animati 5s linear infinite;
+    padding: 10px 10px 10px 10px;
+}
+
+
+
+
+
+@keyframes animati {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color:#000000;
+        box-shadow: none;
+    }
+
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #00d4ff,
+        0 0 20px #00d4ff,
+        0 0 40px #00d4ff,
+        0 0 80px #00d4ff,
+        0 0 160px #00d4ff,
+    }
+}
+
+
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root{
+    --card-height: 65vh;
+    --card-width: calc(var(
+                --card-height)/1.5);
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,95,1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+article{
+    background: radial-gradient(circle, rgba(238,174,219,1) 0%, rgba(233,148,148,1) 100%);
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color:  rgba(238,174,219,1) 0%, rgba(233,148,148,1) 0%;
+    cursor: pointer;
+    font-family: cursive;
+    margin: 40px;
+}
+
+article:hover{
+    color: rgb(238,174,219,1 / 100%);
+    transition: color 1s;
+}
+
+article:hover:before, article:hover:after{
+    animation: none;
+    opacity: 0;
+}
+
+article::before{
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: 
+    linear-gradient(
+        var(--rotate)
+       , #d01297, #BFAEEE 43%, #f474cd);
+     position: absolute;
+     z-index: -1;
+     top:-1%;
+     left: -2%;
+     animation: spin 2.5s linear infinite;
+}
+
+article::after{
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height)/6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height)/6));
+    background-image: linear-gradient(var(--rotate)
+    , #521b42, #BFAEEE 43%, #28001c);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        --rotate: 0deg;
+    }
+    100%{
+        --rotate: 360deg;
+    }
+}
+a{
+    color:#3F72FB;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+#card-show{
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+#shine{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles > span{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color:#f474cd;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #d01297,
+    0 0 50px #f474cd,
+    0 0 100px #f474cd;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background-color:#3F72FB;
+    box-shadow: 0 0 0 10px #2f3f6c,
+    0 0 50px #3F72FB,
+    0 0 100px #3F72FB;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+#shine {
+    height: auto;
+}
+
+.bubbles {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bubbles > span {
+    margin: 6px;
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+.cute-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffc0cb;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-family: amor2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgb(212, 0, 138);
+    padding: 10px 30px 15px;
+    margin: 50px;
+    width: 15rem;
+    height: 100%;
+  }
+
+
+figure{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+  .mensagem {
+    display: none;
+    background: rgb(253,45,95);
+    background: linear-gradient(0deg, rgba(253,45,95,1) 100%, rgba(34,193,195,1) 100%);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 25rem;
+    border-radius: 30px;
+  }
+
+  .mensagem p {
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: amor4;
+  }
+
+  .mensagem > img{
+    width: 100%;
+  }
+
+  .mensagem {
+    transition: opacity 0.3s ease;
+  }
+  
+  .mostrar {
+    display: block;
+    opacity: 1;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .bubbles > span {
+        width: 10px;
+        height: 10px;
+        margin: 0 2px;
+        box-shadow: 0 0 0 4px #d01297,
+                    0 0 20px #f474cd,
+                    0 0 40px #f474cd;
+    }
+
+    .bubbles span:nth-child(even) {
+        box-shadow: 0 0 0 4px #2f3f6c,
+                    0 0 20px #3F72FB,
+                    0 0 40px #3F72FB;
+    }
+}
+
+@media (max-width: 667px) {
+    #shine {
+        height: auto;
+    }
+    
+    .bubbles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .bubbles > span {
+        margin: 8px;
+    }
+}
